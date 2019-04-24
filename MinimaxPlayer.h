@@ -42,6 +42,12 @@ public:
      */
     MinimaxPlayer* clone();
 
+	/* Ultility functions */
+	int utility(OthelloBoard b);
+	std::vector<OthelloBoard*> successor(OthelloBoard b, char symbol);
+	int max_value(OthelloBoard b);
+	int min_value(OthelloBoard b);
+
 private:
 
 };
