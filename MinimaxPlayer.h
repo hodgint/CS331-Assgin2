@@ -29,6 +29,11 @@ public:
 	 */
 	virtual ~MinimaxPlayer();
 
+	/* Ultility functions */
+	int utility(OthelloBoard);
+	std::vector<OthelloBoard*> successor(OthelloBoard, char);
+	int max_value(OthelloBoard);
+	int min_value(OthelloBoard);
 	/**
 	 * @param b The board object for the current state of the board
 	 * @param col Holds the return value for the column of the move
@@ -42,11 +47,7 @@ public:
      */
     MinimaxPlayer* clone();
 
-	/* Ultility functions */
-	int utility(OthelloBoard b);
-	std::vector<OthelloBoard*> successor(OthelloBoard b, char symbol);
-	int max_value(OthelloBoard b);
-	int min_value(OthelloBoard b);
+
 
 private:
 
